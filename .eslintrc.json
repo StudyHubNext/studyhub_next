@@ -13,16 +13,19 @@
     "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "import"
-  ],
+  "plugins": ["@typescript-eslint", "import"],
   "rules": {
     "no-console": "off",
     "no-unused-vars": "warn",
     "import/prefer-default-export": "off",
     "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.test.{js,ts,tsx}", "**/*.stories.{js,ts,tsx}", "vitest.config.*"]
+      }
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -37,20 +40,9 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   },
-  "ignorePatterns": [
-    "node_modules/**",
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts"
-  ]
+  "ignorePatterns": ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"]
 }

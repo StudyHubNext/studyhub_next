@@ -32,7 +32,7 @@ jobs:
         run: npm run build
 
       - name: Run Vitest with coverage
-        run: npm run test -- --coverage --reporter=default --reporter=json-summary
+        run: npm run test:coverage
 
       - name: Upload coverage report artifact
         uses: actions/upload-artifact@v4

@@ -41,7 +41,7 @@ jobs:
           path: coverage
 
       - name: Comment coverage summary on PR
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && hashFiles('coverage/coverage-summary.json') != ''
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           path: coverage/coverage-summary.json

@@ -12,6 +12,12 @@
     "build-storybook": "storybook build",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "next": "15.5.4",
     "react": "19.1.0",

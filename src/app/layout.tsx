@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import './globals.css';
+import '@/app/globals.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const pretendard = localFont({
-  src: './fonts/PretendardVariable.woff2',
+  src: '@/app/fonts/PretendardVariable.woff2',
   variable: '--font-pretendard',
   display: 'swap',
   weight: '100 900',

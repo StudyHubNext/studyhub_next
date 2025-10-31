@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className={`${pretendard.variable} font-pretendard`}>
+    <html lang='en' className={pretendard.variable}>
       <body>{children}</body>
     </html>
   );

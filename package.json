@@ -9,7 +9,21 @@
     "start": "next start",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage --passWithNoTests"
+  },
+  "vitest": {
+    "coverage": {
+      "provider": "v8",
+      "reporter": [
+        "text",
+        "lcov"
+      ],
+      "lines": 80,
+      "functions": 80,
+      "branches": 70
+    }
   },
   "dependencies": {
     "next": "15.5.4",
@@ -37,6 +51,7 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-storybook": "^9.1.10",
     "globals": "^16.4.0",
+    "jsdom": "^27.0.0",
     "playwright": "^1.56.0",
     "prettier": "3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",

@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 
-import Button from '@/components/common/button/Button';
+import { Button } from '@/components';
 
 describe('Button Component', () => {
   it('자식 노드를 올바르게 렌더링해야 합니다.', () => {

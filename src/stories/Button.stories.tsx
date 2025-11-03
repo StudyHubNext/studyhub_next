@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
-import Button from '@/components/button/Button';
+import Button from '@/components/common/button/Button';
 
 const variants = ['primary', 'secondary', 'outline', 'ghost', 'danger'] as const;
 const sizes = ['sm', 'md', 'lg'] as const;

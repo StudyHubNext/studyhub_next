@@ -11,9 +11,16 @@ interface ButtonProps
   children: React.ReactNode;
 }
 
-export default function Button({ variant, size, className, children, ...props }: ButtonProps) {
+export default function Button({
+  variant,
+  size,
+  className,
+  type = 'button',
+  children,
+  ...props
+}: ButtonProps) {
   return (
-    <button className={cn(buttonVariants({ variant, size }), className)} {...props}>
+    <button type={type} className={cn(buttonVariants({ variant, size }), className)} {...props}>
       {children}
     </button>
   );

@@ -75,14 +75,14 @@ const grayColors = {
   'Gray 900': 'var(--color-gray-900)',
 };
 
-const SuccessColors = {
+const successColors = {
   'Success 100': 'var(--color-success-100)',
   'Success 500': 'var(--color-success-500)',
   'Success 600': 'var(--color-success-600)',
   'Success 800': 'var(--color-success-800)',
 };
 
-const DangerColors = {
+const dangerColors = {
   'Danger 100': 'var(--color-danger-100)',
   'Danger 500': 'var(--color-danger-500)',
   'Danger 600': 'var(--color-danger-600)',
@@ -94,8 +94,8 @@ export function Colors() {
     <div>
       <ColorPalette title='Primary Colors' colors={primaryColors} />
       <ColorPalette title='Gray Colors' colors={grayColors} />
-      <ColorPalette title='Success Colors' colors={SuccessColors} />
-      <ColorPalette title='Danger Colors' colors={DangerColors} />
+      <ColorPalette title='Success Colors' colors={successColors} />
+      <ColorPalette title='Danger Colors' colors={dangerColors} />
     </div>
   );
 }

@@ -60,7 +60,7 @@ export const buttonVariants = cva(
       size: {
         sm: ['py-2', 'px-3', 'rounded-md', 'text-sm'],
         md: ['py-2.5', 'px-4', 'rounded-lg', 'text-sm'],
-        lg: ['py-3', 'px-6', 'rounded-lg'],
+        lg: ['py-3', 'px-6', 'rounded-lg', 'text-base'],
       },
     },
 

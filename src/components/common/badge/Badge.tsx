@@ -9,7 +9,6 @@ interface BadgeProps
   extends React.HTMLAttributes<HTMLSpanElement>,
     VariantProps<typeof badgeVariants> {
   content: string;
-  className?: string;
 }
 
 export default function Badge({ variant, size, className, content, ...props }: BadgeProps) {

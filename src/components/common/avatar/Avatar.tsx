@@ -16,7 +16,13 @@ export default function Avatar({ size, name, profileImage, className }: AvatarPr
   return (
     <div className={cn(avatarVariants({ size }), className)}>
       {profileImage ? (
-        <Image className='h-full w-full object-cover' src={profileImage} alt={name} />
+        <Image
+          width={100}
+          height={100}
+          className='h-full w-full object-cover'
+          src={profileImage}
+          alt={name}
+        />
       ) : (
         <>{name.charAt(0)}</>
       )}

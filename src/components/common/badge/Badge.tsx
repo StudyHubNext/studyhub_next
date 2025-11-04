@@ -6,7 +6,7 @@ import { cn } from '@/utils';
 import { badgeVariants } from './badgeVariants';
 
 interface BadgeProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends React.HTMLAttributes<HTMLSpanElement>,
     VariantProps<typeof badgeVariants> {
   content: string;
   className?: string;
@@ -14,8 +14,8 @@ interface BadgeProps
 
 export default function Badge({ variant, size, className, content, ...props }: BadgeProps) {
   return (
-    <div className={cn(badgeVariants({ variant, size }), className)} {...props}>
+    <span className={cn(badgeVariants({ variant, size }), className)} {...props}>
       {content}
-    </div>
+    </span>
   );
 }

@@ -53,9 +53,4 @@ export const Default: Story = {
     size: 'md',
     content: 'Default Badge',
   },
-  render: (args) => (
-    <div className='flex'>
-      <Badge {...args} />
-    </div>
-  ),
 };

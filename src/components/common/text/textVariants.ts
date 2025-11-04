@@ -14,3 +14,17 @@ export const headingVariants = cva('text-gray-900', {
     level: 1,
   },
 });
+
+export const textVariants = cva('text-gray-900', {
+  variants: {
+    variant: {
+      large: 'text-lg',
+      base: 'text-base',
+      small: 'text-sm',
+      extraSmall: 'text-xs',
+    },
+  },
+  defaultVariants: {
+    variant: 'base',
+  },
+});

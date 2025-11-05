@@ -11,7 +11,7 @@ interface LogoProps
 
 export default function Logo({ size, className, ...props }: LogoProps) {
   return (
-    <Link href='/' className='flex items-center gap-2'>
+    <Link href='/' className='flex items-center gap-2' aria-label='메인 페이지로 이동'>
       <div {...props} className={cn(logoVariants({ size }), className)}>
         S
       </div>

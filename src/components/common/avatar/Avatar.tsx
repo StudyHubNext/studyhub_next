@@ -9,7 +9,6 @@ interface AvatarProps
     VariantProps<typeof avatarVariants> {
   name: string;
   profileImage?: string;
-  className?: string;
 }
 
 const SIZE_IN_PIXELS = {

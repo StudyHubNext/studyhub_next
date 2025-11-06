@@ -2,11 +2,12 @@ import { useMediaQuery } from 'react-responsive';
 
 import { MEDIA_QUERY } from '@/constants';
 import Link from 'next/link';
-import { Avatar, Button, Logo, Text } from '@/components/common';
+import { Avatar, Logo, Text } from '@/components/common';
 import { cn } from '@/utils';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Bars3Icon, ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
+import AuthButtonGroup from '../AuthButtonGroup';
 
 export const SERVICE_LISTS = [
   { name: '강의 목록', path: '/courses' },
@@ -65,21 +66,18 @@ export default function Header({ isLoggedIn }: HeaderProps) {
               <div className='flex items-center gap-2'>
                 <Avatar profileImage='/profile-test.webp' name={'김개발'} size='sm' />
                 <Text className='text-primary-600'>{'김개발'}</Text>
-                <button
-                  type='button'
-                  className='w-8 cursor-pointer p-2'
-                  onClick={() => handleToggleDropdown()}
-                >
-                  {isDropdownOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
-                </button>
+                {!isMobile && (
+                  <button
+                    type='button'
+                    className='w-8 cursor-pointer p-2'
+                    onClick={() => handleToggleDropdown()}
+                  >
+                    {isDropdownOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                  </button>
+                )}
               </div>
             ) : (
-              <div className='flex gap-2'>
-                <Button variant='ghost' className='flex-grow justify-center text-base'>
-                  로그인
-                </Button>
-                <Button className='flex-grow justify-center text-base'>회원가입</Button>
-              </div>
+              <>{!isMobile && <AuthButtonGroup />}</>
             )}
           </div>
         </div>

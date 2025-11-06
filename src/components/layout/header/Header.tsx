@@ -1,6 +1,6 @@
 import { useMediaQuery } from 'react-responsive';
 
-import { MEDIA_QUERY } from '@/constants';
+import { MEDIA_QUERY, SERVICE_LISTS } from '@/constants';
 import Link from 'next/link';
 import { Avatar, Logo, Text } from '@/components/common';
 import { cn } from '@/utils';
@@ -8,12 +8,6 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Bars3Icon, ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 import AuthButtonGroup from '../AuthButtonGroup';
-
-export const SERVICE_LISTS = [
-  { name: '강의 목록', path: '/courses' },
-  { name: '스터디 그룹', path: '/study-group' },
-  { name: '구인 공고', path: '/recruitment' },
-];
 
 interface HeaderProps {
   isLoggedIn: boolean;

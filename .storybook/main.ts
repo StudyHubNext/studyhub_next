@@ -1,22 +1,36 @@
-import type { StorybookConfig } from "@storybook/nextjs-vite";
+import type { StorybookConfig } from '@storybook/nextjs-vite';
 
 const config: StorybookConfig = {
-  "stories": [
-    "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  addons: [
+    '@chromatic-com/storybook',
+    '@storybook/addon-docs',
+    '@storybook/addon-a11y',
+    '@storybook/addon-vitest',
   ],
-  "addons": [
-    "@chromatic-com/storybook",
-    "@storybook/addon-docs",
-    "@storybook/addon-a11y",
-    "@storybook/addon-vitest"
-  ],
-  "framework": {
-    "name": "@storybook/nextjs-vite",
-    "options": {}
+  framework: {
+    name: '@storybook/nextjs-vite',
+    options: {},
   },
-  "staticDirs": [
-    "../public"
-  ]
+  staticDirs: ['../public'],
+  viteFinal: async (config) => {
+    config.optimizeDeps = {
+      ...(config.optimizeDeps || {}),
+      include: [
+        ...(config.optimizeDeps?.include || []),
+        '@heroicons/react/24/outline',
+        '@heroicons/react/24/solid',
+      ],
+      exclude: ['@storybook/nextjs', '@storybook/nextjs-vite'],
+    };
+
+    config.ssr = {
+      ...(config.ssr || {}),
+      noExternal: ['@heroicons/react'],
+    };
+
+    return config;
+  },
 };
+
 export default config;

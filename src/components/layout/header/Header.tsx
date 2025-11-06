@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Bars3Icon, ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 import AuthButtonGroup from '../AuthButtonGroup';
+import UserDropdown from './UserDropdown';
 
 interface HeaderProps {
   isLoggedIn: boolean;
@@ -61,13 +62,16 @@ export default function Header({ isLoggedIn }: HeaderProps) {
                 <Avatar profileImage='/profile-test.webp' name={'김개발'} size='sm' />
                 <Text className='text-primary-600'>{'김개발'}</Text>
                 {!isMobile && (
-                  <button
-                    type='button'
-                    className='w-8 cursor-pointer p-2'
-                    onClick={() => handleToggleDropdown()}
-                  >
-                    {isDropdownOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
-                  </button>
+                  <div className='relative'>
+                    <button
+                      type='button'
+                      className='w-8 cursor-pointer p-2'
+                      onClick={() => handleToggleDropdown()}
+                    >
+                      {isDropdownOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                    </button>
+                    <UserDropdown isOpen={isDropdownOpen} />
+                  </div>
                 )}
               </div>
             ) : (

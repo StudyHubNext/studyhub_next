@@ -26,7 +26,7 @@ export default function UserDropdown() {
             </Button>
           </div>
           <div className='py-2'>
-            <div className='border border-gray-100' />
+            <hr className='border-gray-100' />
           </div>
           <div className='px-2'>
             <Button variant='ghost' className='text-danger-600 w-full gap-3 p-2'>

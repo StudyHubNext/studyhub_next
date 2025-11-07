@@ -1,17 +1,14 @@
-import { useMediaQuery } from 'react-responsive';
-
-import { MEDIA_QUERY, SERVICE_LISTS } from '@/constants';
+import { SERVICE_LISTS } from '@/constants';
 import Link from 'next/link';
 import { cn } from '@/utils';
 import { useRouter } from 'next/router';
 
 export default function HeaderNav() {
-  const isTablet = useMediaQuery({ query: MEDIA_QUERY.tablet });
   const { pathname } = useRouter();
 
   return (
-    <nav className={cn(isTablet ? 'hidden' : 'flex')}>
-      <ul className={cn('flex gap-8', isTablet && 'flex-col')}>
+    <nav className='hidden md:block'>
+      <ul className={cn('flex gap-8')}>
         {SERVICE_LISTS.map((navItem) => (
           <li key={navItem.path}>
             <Link

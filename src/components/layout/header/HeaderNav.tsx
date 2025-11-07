@@ -1,10 +1,10 @@
 import { SERVICE_LISTS } from '@/constants';
 import Link from 'next/link';
 import { cn } from '@/utils';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 export default function HeaderNav() {
-  const { pathname } = useRouter();
+  const pathname = usePathname() || '';
 
   return (
     <nav className='hidden md:block'>

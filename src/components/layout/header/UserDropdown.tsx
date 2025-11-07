@@ -1,18 +1,22 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { ArrowLeftOnRectangleIcon, UserIcon } from '@heroicons/react/24/outline';
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 
 import { Button } from '@/components/common';
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 
 export default function UserDropdown() {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleToggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
 
+  useOnClickOutside(dropdownRef, () => setIsDropdownOpen(false));
+
   return (
-    <div className='xs:block relative hidden'>
+    <div ref={dropdownRef} className='xs:block relative hidden'>
       <Button variant='ghost' className='w-8 p-2' onClick={() => handleToggleDropdown()}>
         {isDropdownOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
       </Button>

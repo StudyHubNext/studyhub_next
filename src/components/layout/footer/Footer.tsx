@@ -1,4 +1,4 @@
-import { H, Text } from '@/components';
+import { H, Text } from '@/components/common';
 import Link from 'next/link';
 
 export const FOOTER_NAV_LISTS = [
@@ -22,8 +22,8 @@ export const FOOTER_NAV_LISTS = [
 
 export default function Footer() {
   return (
-    <footer className='flex justify-center bg-gray-900 px-6 py-8 md:px-20 md:py-12'>
-      <div className='w-full max-w-7xl md:px-8'>
+    <footer className='flex justify-center bg-gray-900 px-4 py-8 md:px-20 md:py-12'>
+      <div className='w-full max-w-7xl'>
         <div className='grid gap-8 md:grid-cols-4'>
           <div className='col-span-2'>
             <Link href='/'>

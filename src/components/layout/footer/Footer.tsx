@@ -30,7 +30,9 @@ export default function Footer() {
           ))}
         </div>
         <div className='xs:pt-8 flex justify-center pt-4'>
-          <Text className='text-gray-400'>© 2024 StudyHub. All rights reserved</Text>
+          <Text className='text-gray-400'>
+            © {new Date().getFullYear()} StudyHub. All rights reserved
+          </Text>
         </div>
       </div>
     </footer>

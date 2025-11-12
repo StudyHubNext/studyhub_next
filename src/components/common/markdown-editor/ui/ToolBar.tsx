@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Bold, Italic, Code, Link, Heading1, List, type LucideIcon } from 'lucide-react';
 
@@ -7,10 +8,6 @@ interface ToolbarButton {
   ariaLabel: string;
   before: string;
   after?: string;
-}
-
-interface EditorToolbarProps {
-  onInsertMarkdown: (before: string, after?: string) => void;
 }
 
 const TOOLBAR_BUTTONS: ToolbarButton[] = [
@@ -58,10 +55,13 @@ const TOOLBAR_BUTTONS: ToolbarButton[] = [
   },
 ];
 
+interface EditorToolbarProps {
+  onInsertMarkdown: (before: string, after?: string) => void;
+}
+
 function EditorToolbar({ onInsertMarkdown }: EditorToolbarProps) {
   function handleButtonClick(button: ToolbarButton): void {
-    const after = button.after !== undefined ? button.after : button.before;
-    onInsertMarkdown(button.before, after);
+    onInsertMarkdown(button.before, button.after);
   }
 
   return (

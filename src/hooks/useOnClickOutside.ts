@@ -8,7 +8,7 @@ export function useOnClickOutside<T extends HTMLElement>(
     const listener = (event: MouseEvent | TouchEvent) => {
       const el = ref.current;
       if (!el || el.contains(event.target as Node)) return;
-      handler(event);
+      handler();
     };
 
     document.addEventListener('mousedown', listener);

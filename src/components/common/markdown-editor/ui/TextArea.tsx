@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 
 interface EditorTextareaProps {
@@ -7,11 +8,11 @@ interface EditorTextareaProps {
 }
 
 const EditorTextarea = React.forwardRef<HTMLTextAreaElement, EditorTextareaProps>(
-  ({ value, onChange: handleChange, placeholder = '마크다운을 입력하세요...' }, ref) => (
+  ({ value, onChange, placeholder = '마크다운을 입력하세요...' }, ref) => (
     <textarea
       ref={ref}
       value={value}
-      onChange={handleChange}
+      onChange={onChange}
       className='font-base resize-vertical h-80 w-full border-none p-4 focus:outline-none'
       placeholder={placeholder}
     />

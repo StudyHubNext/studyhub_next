@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import type { TabType } from '@/components/common/markdown-editor/types';
 
@@ -11,17 +12,17 @@ function EditorTabs({ activeTab, onTabChange }: EditorTabsProps) {
 
   return (
     <div className='flex border-b border-gray-200'>
-      {tabs.map((currentTab) => (
+      {tabs.map((tab) => (
         <button
-          key={currentTab}
-          onClick={() => onTabChange(currentTab)}
+          key={tab}
+          onClick={() => onTabChange(tab)}
           className={`flex-1 px-4 py-3 text-center font-medium transition ${
-            activeTab === currentTab
+            activeTab === tab
               ? 'border-b-2 border-blue-500 bg-blue-50 text-blue-600'
               : 'text-gray-600 hover:text-gray-800'
           }`}
         >
-          {currentTab}
+          {tab}
         </button>
       ))}
     </div>

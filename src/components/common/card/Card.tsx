@@ -4,7 +4,7 @@ import Text from '@/components/common/text/Text';
 import { cn } from '@/utils';
 
 interface CardProps extends ComponentPropsWithoutRef<'div'> {
-  title: string;
+  title?: string;
   children: ReactNode;
   titleVariant?: 'base' | 'large';
   titleClassName?: string;
@@ -27,12 +27,14 @@ export default function Card({
       )}
       {...props}
     >
-      <Text
-        variant={titleVariant}
-        className={cn('pb-2 leading-normal font-semibold', titleClassName)}
-      >
-        {title}
-      </Text>
+      {title && (
+        <Text
+          variant={titleVariant}
+          className={cn('pb-2 leading-normal font-semibold', titleClassName)}
+        >
+          {title}
+        </Text>
+      )}
       {children}
     </div>
   );

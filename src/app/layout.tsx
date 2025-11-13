@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang='en' className={pretendard.variable}>
       <body>
         <Header isLoggedIn={false} />
-        <main className='pt-16'>{children}</main>
+        <main className='pt-[var(--header-height)]'>{children}</main>
         <Footer />
       </body>
     </html>

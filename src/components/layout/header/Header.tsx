@@ -10,7 +10,7 @@ interface HeaderProps {
 
 export default function Header({ isLoggedIn }: HeaderProps) {
   return (
-    <header className='fixed z-50 h-16 w-full border-b border-gray-200 bg-white px-4 md:px-20'>
+    <header className='fixed z-50 h-[var(--header-height)] w-full border-b border-gray-200 bg-white px-4 md:px-20'>
       <div className='m-auto flex h-full max-w-7xl items-center'>
         <div className='flex w-full justify-between'>
           <div className='flex items-center gap-2.5 md:hidden'>

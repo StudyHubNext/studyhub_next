@@ -1,3 +1,5 @@
+'use client';
+
 import { useRef, useState } from 'react';
 import { ArrowLeftOnRectangleIcon, UserIcon } from '@heroicons/react/24/outline';
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';

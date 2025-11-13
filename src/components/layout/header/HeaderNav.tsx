@@ -1,3 +1,5 @@
+'use client';
+
 import { SERVICE_LISTS } from '@/constants';
 import Link from 'next/link';
 import { cn } from '@/utils';

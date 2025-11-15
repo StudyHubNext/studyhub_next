@@ -1,4 +1,4 @@
-import { forwardRef, InputHTMLAttributes, ReactNode } from 'react';
+import { forwardRef, InputHTMLAttributes, ReactNode, useId } from 'react';
 import { cn } from '@/utils';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -8,9 +8,13 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 function Input(
-  { className, type, error = false, errorMessage, icon, ...props }: InputProps,
+  { className, type, error = false, errorMessage, icon, id: providedId, ...props }: InputProps,
   ref: React.Ref<HTMLInputElement>,
 ) {
+  const autoId = useId();
+  const id = providedId || autoId;
+  const errorId = `error-${id}`;
+
   return (
     <div className='w-full'>
       <div className='relative flex items-center'>
@@ -18,6 +22,7 @@ function Input(
           <div className='pointer-events-none absolute left-3 flex items-center'>{icon}</div>
         )}
         <input
+          id={id}
           type={type}
           className={cn(
             'flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400',
@@ -30,10 +35,16 @@ function Input(
             className,
           )}
           ref={ref}
+          aria-invalid={error}
+          aria-describedby={error && errorMessage ? errorId : undefined}
           {...props}
         />
       </div>
-      {error && errorMessage && <p className='text-danger-500 mt-1 text-xs'>{errorMessage}</p>}
+      {error && errorMessage && (
+        <p id={errorId} className='text-danger-500 mt-1 text-xs'>
+          {errorMessage}
+        </p>
+      )}
     </div>
   );
 }

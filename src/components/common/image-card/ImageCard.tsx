@@ -20,22 +20,20 @@ export default function ImageCard({
 }: ImageCardProps) {
   return (
     <div className='relative overflow-hidden rounded-lg border border-gray-200' {...rest}>
-      <div>
-        <div className='relative aspect-[2/1] overflow-hidden rounded-t-lg'>
-          {imageUrl ? (
-            <Image
-              src={imageUrl}
-              alt={title}
-              fill
-              className='h-full w-full bg-gray-200 object-cover'
-            />
-          ) : (
-            <div className='flex h-full items-center justify-center bg-gray-200'>
-              <PhotoIcon className='h-8 w-8 text-gray-400' />
-            </div>
-          )}
-          {overlayContent}
-        </div>
+      <div className='relative aspect-[2/1] overflow-hidden rounded-t-lg'>
+        {imageUrl ? (
+          <Image
+            src={imageUrl}
+            alt={title}
+            fill
+            className='h-full w-full bg-gray-200 object-cover'
+          />
+        ) : (
+          <div className='flex h-full items-center justify-center bg-gray-200'>
+            <PhotoIcon className='h-8 w-8 text-gray-400' />
+          </div>
+        )}
+        {overlayContent}
       </div>
       <div className={cn('flex flex-col', className)}>{children}</div>
     </div>

@@ -1,22 +1,25 @@
 import { H, Text } from '@/components';
 import { cn } from '@/utils';
-import { BookOpenIcon } from '@heroicons/react/24/outline';
+import { AcademicCapIcon, UsersIcon, BookOpenIcon } from '@heroicons/react/24/outline';
 
 const FEATURE_LIST = [
   {
     title: '다양한 강의',
     description: '프론트엔드부터 백엔드, 데이터사이언스까지 모든 분야의 전문 강의를 제공합니다.',
     iconColor: 'bg-primary-100 text-primary-600',
+    icon: BookOpenIcon,
   },
   {
     title: '스터디 그룹',
     description: '같은 목표를 가진 사람들과 함께 학습하며 서로 동기부여하고 성장할 수 있습니다.',
     iconColor: 'bg-success-100 text-success-600',
+    icon: UsersIcon,
   },
   {
     title: '전문 강사진',
     description: '실무 경험이 풍부한 전문가들이 직접 제작한 고품질의 강의 콘텐츠를 만나보세요.',
     iconColor: 'bg-[#F3E8FF] text-[#9333EA]',
+    icon: AcademicCapIcon,
   },
 ];
 
@@ -40,7 +43,7 @@ export default function FeatureSection() {
                     'flex h-16 w-16 items-center justify-center rounded-full',
                   )}
                 >
-                  <BookOpenIcon width={24} />
+                  <feature.icon width={24} />
                 </div>
                 <H level={3} className='text-xl'>
                   {feature.title}

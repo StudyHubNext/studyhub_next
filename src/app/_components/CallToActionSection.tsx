@@ -4,7 +4,7 @@ export default function CallToActionSection() {
   return (
     <section className='bg-primary-500 px-4 py-16 md:px-20'>
       <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 text-center'>
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 break-keep'>
           <H level={2} className='text-white'>
             지금 시작하여 IT 전문가가 되어보세요!
           </H>

@@ -21,7 +21,7 @@ export default function HeroSection() {
             <Button
               size='lg'
               variant='outline'
-              className='border-primary-600 text-primary-600 hover hover:border-primary-600 bg-transparent'
+              className='border-primary-600 text-primary-600 hover:border-primary-600 bg-transparent'
             >
               스터디 그룹 참여
             </Button>

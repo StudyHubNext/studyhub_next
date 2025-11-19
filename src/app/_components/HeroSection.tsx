@@ -1,7 +1,7 @@
 import { Button, H, Text } from '@/components';
 import Image from 'next/image';
 
-export default function LandingSection() {
+export default function HeroSection() {
   return (
     <section className='from-primary-50 bg-gradient-to-b to-white px-4 py-20 md:px-20'>
       <div className='mx-auto flex w-full max-w-7xl gap-12'>

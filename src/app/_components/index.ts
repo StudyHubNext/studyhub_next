@@ -1,4 +1,4 @@
-export { default as HeroSection } from '@/app/_components/HeroSection';
-export { default as FeatureSection } from '@/app/_components/FeatureSection';
-export { default as LectureSection } from '@/app/_components/LectureSection';
-export { default as CallToActionSection } from '@/app/_components/CallToActionSection';
+export { default as HeroSection } from './HeroSection';
+export { default as FeatureSection } from './FeatureSection';
+export { default as LectureSection } from './LectureSection';
+export { default as CallToActionSection } from './CallToActionSection';

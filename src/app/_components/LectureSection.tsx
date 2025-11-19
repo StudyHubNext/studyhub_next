@@ -17,29 +17,26 @@ export default function LectureSection() {
         </div>
         <div className='xs:flex-row flex flex-col justify-between gap-6'>
           {LECTURES.slice(0, 3).map((lecture) => (
-            <ImageCard
-              key={lecture.id}
-              title={lecture.title}
-              imageUrl={lecture.image}
-              className='w-100 bg-white'
-            >
-              <div className='flex flex-col gap-3 p-5'>
-                <H level={3} className='text-lg'>
-                  {lecture.title}
-                </H>
-                <Text variant='small' className='text-gray-600'>
-                  {lecture.instructor}
-                </Text>
-                <div className='flex items-center gap-1'>
-                  <Text variant='large' className='font-bold'>
-                    {lecture.discountedPrice.toLocaleString('ko-KR')}
+            <div key={lecture.id} className='w-full'>
+              <ImageCard title={lecture.title} imageUrl={lecture.image} className='bg-white'>
+                <div className='flex flex-col gap-3 p-5'>
+                  <H level={3} className='text-lg'>
+                    {lecture.title}
+                  </H>
+                  <Text variant='small' className='text-gray-600'>
+                    {lecture.instructor}
                   </Text>
-                  <Text variant='small' className='text-gray-500 line-through'>
-                    {lecture.price.toLocaleString('ko-KR')}
-                  </Text>
+                  <div className='flex items-center gap-1'>
+                    <Text variant='large' className='font-bold'>
+                      {lecture.discountedPrice.toLocaleString('ko-KR')}
+                    </Text>
+                    <Text variant='small' className='text-gray-500 line-through'>
+                      {lecture.price.toLocaleString('ko-KR')}
+                    </Text>
+                  </div>
                 </div>
-              </div>
-            </ImageCard>
+              </ImageCard>
+            </div>
           ))}
         </div>
       </div>

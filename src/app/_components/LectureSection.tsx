@@ -16,7 +16,7 @@ export default function LectureSection() {
           </Text>
         </div>
         <div className='xs:flex-row flex flex-col justify-between gap-6'>
-          {LECTURES.slice(0, 4).map((lecture) => (
+          {LECTURES.slice(0, 3).map((lecture) => (
             <ImageCard
               key={lecture.id}
               title={lecture.title}

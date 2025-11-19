@@ -18,7 +18,7 @@ const FEATURE_LIST = [
   {
     title: '전문 강사진',
     description: '실무 경험이 풍부한 전문가들이 직접 제작한 고품질의 강의 콘텐츠를 만나보세요.',
-    iconColor: 'bg-[#F3E8FF] text-[#9333EA]',
+    iconColor: 'bg-purple-100 text-purple-600',
     icon: AcademicCapIcon,
   },
 ];

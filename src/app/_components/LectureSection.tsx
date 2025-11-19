@@ -6,7 +6,7 @@ export default function LectureSection() {
   return (
     <section className='bg-gray-50 px-4 py-16 md:px-20'>
       <div className='mx-auto flex w-full max-w-7xl flex-col gap-8'>
-        <div className='itmes-center flex justify-between'>
+        <div className='flex items-center justify-between'>
           <div className='flex flex-col gap-2'>
             <H level={2}>인기 강의</H>
             <Text className='text-gray-600'>지금 가장 많은 사람들이 수강하는 강의들</Text>

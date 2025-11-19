@@ -1,6 +1,7 @@
 import { H, ImageCard, Text } from '@/components';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { LECTURES } from '@/mocks';
+import Link from 'next/link';
 
 export default function LectureSection() {
   return (
@@ -11,9 +12,12 @@ export default function LectureSection() {
             <H level={2}>인기 강의</H>
             <Text className='text-gray-600'>지금 가장 많은 사람들이 수강하는 강의들</Text>
           </div>
-          <Text className='text-primary-600 flex cursor-pointer gap-1 hover:underline'>
+          <Link
+            href='https://www.inflearn.com/?infPartner=true&utm_source=google&utm_medium=pmax&utm_campaign=purchase_regular_g-purchase-main&utm_content=_branding_all&utm_term=_240325_no-2&gad_source=1&gad_campaignid=20714471420&gbraid=0AAAAADAClSDymDq15eTOapENAacNu8pjJ&gclid=CjwKCAiA8vXIBhAtEiwAf3B-g5wSL17ElYgd7YOePeeOVETJHEg3cVk-qx3QQeyUarYO-14OQfs8QBoCyZkQAvD_BwE'
+            className='text-primary-600 flex cursor-pointer items-center gap-1 hover:underline'
+          >
             모든 강의 보기 <ArrowRightIcon width={16} />
-          </Text>
+          </Link>
         </div>
         <div className='xs:flex-row flex flex-col justify-between gap-6'>
           {LECTURES.slice(0, 3).map((lecture) => (

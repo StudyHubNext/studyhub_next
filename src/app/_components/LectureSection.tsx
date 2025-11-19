@@ -32,7 +32,7 @@ export default function LectureSection() {
                 </Text>
                 <div className='flex items-center gap-1'>
                   <Text variant='large' className='font-bold'>
-                    {lecture.discounted_price.toLocaleString('ko-KR')}
+                    {lecture.discountedPrice.toLocaleString('ko-KR')}
                   </Text>
                   <Text variant='small' className='text-gray-500 line-through'>
                     {lecture.price.toLocaleString('ko-KR')}

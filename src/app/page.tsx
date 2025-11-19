@@ -1,6 +1,6 @@
 import {
-  FeatureSection,
   HeroSection,
+  FeatureSection,
   LectureSection,
   CallToActionSection,
 } from '@/app/_components';

@@ -25,4 +25,6 @@ export const PATHS = {
         `${GROUP_RECORD_DETAIL_BASE(groupId, recordId)}/edit`,
     },
   },
+
+  NOT_FOUND: '/404',
 } as const;

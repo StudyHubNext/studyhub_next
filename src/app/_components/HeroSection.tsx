@@ -1,7 +1,12 @@
+'use client';
+
 import { Button, H, Text } from '@/components';
+import { usePageNav } from '@/hooks';
 import Image from 'next/image';
 
 export default function HeroSection() {
+  const { navigateToLecture, navigateToGroupList } = usePageNav();
+
   return (
     <section className='from-primary-50 bg-gradient-to-b to-white px-4 py-20 md:px-20'>
       <div className='mx-auto flex w-full max-w-7xl gap-12'>
@@ -17,11 +22,14 @@ export default function HeroSection() {
             최고의 강사진과 함께하는 IT 강의와 스터디 그룹으로 실무 역량을 키워보세요.
           </Text>
           <div className='flex gap-4'>
-            <Button size='lg'>강의 둘러보기</Button>
+            <Button size='lg' onClick={navigateToLecture}>
+              강의 둘러보기
+            </Button>
             <Button
               size='lg'
               variant='outline'
               className='border-primary-600 text-primary-600 hover:border-primary-600 bg-transparent'
+              onClick={navigateToGroupList}
             >
               스터디 그룹 참여
             </Button>

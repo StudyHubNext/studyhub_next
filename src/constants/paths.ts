@@ -10,7 +10,7 @@ export const PATHS = {
   SIGNUP: '/signup',
   MYPAGE: '/mypage',
   LECTURES:
-    'https://www.inflearn.com/?infPartner=true&utm_source=google&utm_medium=pmax&utm_campaign=purchase_regular_g-purchase-main&utm_content=_branding_all&utm_term=_240325_no-2&gad_source=1&gad_campaignid=20714471420&gbraid=0AAAAADAClSDymDq15eTOapENAacNu8pjJ&gclid=CjwKCAiA8vXIBhAtEiwAf3B-g5wSL17ElYgd7YOePeeOVETJHEg3cVk-qx3QQeyUarYO-14OQfs8QBoCyZkQAvD_BwE',
+    'https://www.inflearn.com/?infPartner=true&utm_source=google&utm_medium=pmax&utm_campaign=purchase_regular_g-purchase-main&utm_content=_branding_all&utm_term=_240325_no-2&gad_source=1&gad_campaignid=20714471420',
 
   GROUPS: {
     LIST: GROUPS_BASE,

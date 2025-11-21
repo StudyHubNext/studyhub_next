@@ -6,8 +6,10 @@ import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 
 import { Button } from '@/components/common';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
+import { usePageNav } from '@/hooks';
 
 export default function UserDropdown() {
+  const { navigateToMyPage } = usePageNav();
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -26,7 +28,7 @@ export default function UserDropdown() {
       {isDropdownOpen && (
         <div className='absolute top-10 right-2 flex w-48 flex-col rounded-lg border border-gray-200 bg-white py-2 shadow-md'>
           <div className='px-2'>
-            <Button variant='ghost' className='w-full gap-3 p-2'>
+            <Button variant='ghost' className='w-full gap-3 p-2' onClick={navigateToMyPage}>
               <UserIcon width={14} />
               마이페이지
             </Button>

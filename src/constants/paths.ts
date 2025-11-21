@@ -9,6 +9,8 @@ export const PATHS = {
   LOGIN: '/login',
   SIGNUP: '/signup',
   MYPAGE: '/mypage',
+  LECTURES:
+    'https://www.inflearn.com/?infPartner=true&utm_source=google&utm_medium=pmax&utm_campaign=purchase_regular_g-purchase-main&utm_content=_branding_all&utm_term=_240325_no-2&gad_source=1&gad_campaignid=20714471420',
 
   GROUPS: {
     LIST: GROUPS_BASE,
@@ -23,4 +25,6 @@ export const PATHS = {
         `${GROUP_RECORD_DETAIL_BASE(groupId, recordId)}/edit`,
     },
   },
+
+  NOT_FOUND: '/404',
 } as const;

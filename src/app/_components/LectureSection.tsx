@@ -2,6 +2,7 @@ import { H, ImageCard, Text } from '@/components';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { LECTURES } from '@/mocks';
 import Link from 'next/link';
+import { PATHS } from '@/constants';
 
 export default function LectureSection() {
   return (
@@ -13,7 +14,7 @@ export default function LectureSection() {
             <Text className='text-gray-600'>지금 가장 많은 사람들이 수강하는 강의들</Text>
           </div>
           <Link
-            href='https://www.inflearn.com/?infPartner=true&utm_source=google&utm_medium=pmax&utm_campaign=purchase_regular_g-purchase-main&utm_content=_branding_all&utm_term=_240325_no-2&gad_source=1&gad_campaignid=20714471420&gbraid=0AAAAADAClSDymDq15eTOapENAacNu8pjJ&gclid=CjwKCAiA8vXIBhAtEiwAf3B-g5wSL17ElYgd7YOePeeOVETJHEg3cVk-qx3QQeyUarYO-14OQfs8QBoCyZkQAvD_BwE'
+            href={PATHS.LECTURES}
             className='text-primary-600 flex cursor-pointer items-center gap-1 hover:underline'
           >
             모든 강의 보기 <ArrowRightIcon width={16} />

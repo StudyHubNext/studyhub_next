@@ -1,6 +1,11 @@
+'use client';
+
 import { Button, H, Text } from '@/components';
+import { usePageNav } from '@/hooks';
 
 export default function CallToActionSection() {
+  const { navigateToGroupList, navigateToGroupCreate } = usePageNav();
+
   return (
     <section className='bg-primary-500 px-4 py-16 md:px-20'>
       <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 text-center'>
@@ -13,13 +18,18 @@ export default function CallToActionSection() {
           </Text>
         </div>
         <div className='flex gap-4'>
-          <Button size='lg' className='text-primary-600 border-white bg-white hover:text-white'>
+          <Button
+            size='lg'
+            className='text-primary-600 border-white bg-white hover:text-white'
+            onClick={navigateToGroupList}
+          >
             무료로 시작하기
           </Button>
           <Button
             size='lg'
             variant='outline'
             className='hover:bg-primary-600 hover:border-primary-600 bg-transparent text-white hover:text-white'
+            onClick={navigateToGroupCreate}
           >
             스터디 그룹 만들기
           </Button>

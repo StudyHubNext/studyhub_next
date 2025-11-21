@@ -1,3 +1,5 @@
+'use client';
+
 import { PATHS } from '@/constants';
 import { useRouter, useParams } from 'next/navigation';
 

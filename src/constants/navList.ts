@@ -20,3 +20,5 @@ export const FOOTER_NAV_LISTS = [
     ],
   },
 ];
+
+export const SIDE_NAV_LISTS = [...SERVICE_LISTS, { name: '마이페이지', path: PATHS.MYPAGE }];

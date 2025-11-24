@@ -8,7 +8,7 @@ export default function AuthButtonGroup() {
 
   return (
     <div className='flex gap-2'>
-      <Button variant='ghost' className='flex-grow text-base'>
+      <Button variant='ghost' className='flex-grow text-base' onClick={navigateToLogin}>
         로그인
       </Button>
       <Button className='flex-grow text-base' onClick={navigateToSignup}>

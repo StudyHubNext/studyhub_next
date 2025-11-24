@@ -7,8 +7,8 @@ export default function AuthButtonGroup() {
   const { navigateToLogin, navigateToSignup } = usePageNav();
 
   return (
-    <div className='xs:flex hidden gap-2'>
-      <Button variant='ghost' className='flex-grow text-base' onClick={navigateToLogin}>
+    <div className='flex gap-2'>
+      <Button variant='ghost' className='flex-grow text-base'>
         로그인
       </Button>
       <Button className='flex-grow text-base' onClick={navigateToSignup}>

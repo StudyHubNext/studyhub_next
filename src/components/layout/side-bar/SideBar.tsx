@@ -6,14 +6,14 @@ import {
   MegaphoneIcon,
   UserGroupIcon,
   UserIcon,
-  XMarkIcon,
 } from '@heroicons/react/24/outline';
-import { Avatar, Button, Logo, Text } from '@/components/common';
+import { Avatar, Button, Text } from '@/components/common';
 import { SIDE_NAV_LISTS } from '@/constants';
 import { cn } from '@/utils';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { SideBarHeader } from '.';
 
 interface HeaderSideMenuProps {
   isLoggedIn: boolean;
@@ -43,14 +43,7 @@ export default function SideMenu({ isLoggedIn, isOpen, onClose }: HeaderSideMenu
 
       <div className='fixed top-0 left-0 flex h-full w-80 flex-col justify-between bg-white shadow-lg'>
         <div>
-          <header className='flex justify-between border-b border-gray-200 p-4'>
-            <div className='flex items-center gap-2'>
-              <Logo size='md' />
-            </div>
-            <button type='button' aria-label='닫기' onClick={onClose}>
-              <XMarkIcon aria-hidden='true' width={18} className='cursor-pointer' />
-            </button>
-          </header>
+          <SideBarHeader onClose={onClose}></SideBarHeader>
 
           <div className='flex flex-col gap-2 p-4'>
             <Text variant='small' className='px-3 py-2 font-semibold text-gray-500'>

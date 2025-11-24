@@ -10,6 +10,16 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    nextjs: {
+      appDirectory: true,
+      router: {
+        push: () => Promise.resolve(),
+        replace: () => Promise.resolve(),
+        prefetch: () => Promise.resolve(),
+        back: () => {},
+        forward: () => {},
+      },
+    },
 
     a11y: {
       // 'todo' - show a11y violations in the test UI only

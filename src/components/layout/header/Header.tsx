@@ -10,7 +10,7 @@ import HeaderNav from './HeaderNav';
 import SideBar from '../side-bar/SideBar';
 
 export default function Header() {
-  const { isLoggedIn } = useUserStore();
+  const { user, isLoggedIn } = useUserStore();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
@@ -30,8 +30,12 @@ export default function Header() {
 
             {isLoggedIn ? (
               <div className='flex items-center gap-2'>
-                <Avatar profileImage='/profile-test.webp' name={'김개발'} size='sm' />
-                <Text className='text-primary-600'>{'김개발'}</Text>
+                <Avatar
+                  profileImage={user?.profileImageUrl}
+                  name={user?.nickname ?? ''}
+                  size='sm'
+                />
+                <Text className='text-primary-600'>{user?.nickname ?? ''}</Text>
                 <UserDropdown />
               </div>
             ) : (

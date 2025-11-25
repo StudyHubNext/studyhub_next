@@ -9,8 +9,7 @@ export const PATHS = {
   HOME: '/',
   LOGIN: '/login',
   SIGNUP: '/signup',
-  LECTURES:
-    'https://www.inflearn.com/?infPartner=true&utm_source=google&utm_medium=pmax&utm_campaign=purchase_regular_g-purchase-main&utm_content=_branding_all&utm_term=_240325_no-2&gad_source=1&gad_campaignid=20714471420',
+  LECTURES: '/lectures',
 
   MYPAGE: {
     PROFILE: `${MYPAGE_BASE}/profile`,

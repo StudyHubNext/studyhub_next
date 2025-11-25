@@ -15,7 +15,7 @@ export default function SideBarFooter() {
           </div>
         </div>
         <Button variant='secondary' size='lg' className='justify-center px-4 py-2'>
-          <ArrowLeftOnRectangleIcon width={18} className='h-7' />
+          <ArrowLeftOnRectangleIcon width={18} />
           로그아웃
         </Button>
       </div>

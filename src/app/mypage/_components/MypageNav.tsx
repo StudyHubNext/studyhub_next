@@ -41,19 +41,22 @@ export default function MypageNav() {
       <nav>
         <ul className='flex flex-col gap-2'>
           {MYPAGE_NAV_LISTS.map((navItem) => (
-            <Link key={navItem.name} href={navItem.path}>
-              <Button
-                variant='ghost'
-                size='md'
-                className={cn(
-                  'hover:bg-primary-50 w-full gap-3 px-3',
-                  pathname.startsWith(navItem.path) && 'text-primary-600 bg-primary-50 font-medium',
-                )}
-              >
-                {NAV_ICON_MAP[navItem.name]}
-                {navItem.name}
-              </Button>
-            </Link>
+            <li key={navItem.name}>
+              <Link href={navItem.path}>
+                <Button
+                  variant='ghost'
+                  size='md'
+                  className={cn(
+                    'hover:bg-primary-50 w-full gap-3 px-3',
+                    pathname.startsWith(navItem.path) &&
+                      'text-primary-600 bg-primary-50 font-medium',
+                  )}
+                >
+                  {NAV_ICON_MAP[navItem.name]}
+                  {navItem.name}
+                </Button>
+              </Link>
+            </li>
           ))}
         </ul>
       </nav>

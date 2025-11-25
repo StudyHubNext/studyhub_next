@@ -24,7 +24,7 @@ export default function SideMenu({ isLoggedIn, isOpen, onClose }: HeaderSideMenu
           <SideBarNav />
         </div>
 
-        {isLoggedIn ?? <SideBarFooter />}
+        {isLoggedIn && <SideBarFooter />}
       </div>
     </div>
   );

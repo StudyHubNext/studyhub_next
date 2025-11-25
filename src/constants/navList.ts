@@ -22,3 +22,10 @@ export const FOOTER_NAV_LISTS = [
 ];
 
 export const SIDE_NAV_LISTS = [...SERVICE_LISTS, { name: '마이페이지', path: PATHS.MYPAGE }];
+
+export const MYPAGE_NAV_LISTS = [
+  { name: '내 정보', path: PATHS.MYPAGE.PROFILE },
+  { name: '북마크한 강의', path: PATHS.MYPAGE.LECTURES },
+  { name: '지원 내역', path: PATHS.MYPAGE.APPLICATIONS },
+  { name: '내 스터디', path: PATHS.MYPAGE.STUDY },
+];

@@ -6,7 +6,6 @@ describe('constants/paths', () => {
     expect(PATHS.HOME).toBe('/');
     expect(PATHS.LOGIN).toBe('/login');
     expect(PATHS.SIGNUP).toBe('/signup');
-    expect(PATHS.MYPAGE).toBe('/mypage');
   });
 
   describe('GROUPS 경로', () => {

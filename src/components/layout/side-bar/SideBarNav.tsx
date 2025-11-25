@@ -4,13 +4,14 @@ import { SIDE_NAV_LISTS } from '@/constants';
 import { cn } from '@/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { JSX } from 'react';
 
-const NAV_ICONS = [
-  { name: '강의 목록', icon: <BookOpenIcon width={18} /> },
-  { name: '스터디 그룹', icon: <UserGroupIcon width={18} /> },
-  { name: '구인 공고', icon: <MegaphoneIcon width={18} /> },
-  { name: '마이페이지', icon: <UserIcon width={18} /> },
-];
+const NAV_ICON_MAP: Record<string, JSX.Element> = {
+  '강의 목록': <BookOpenIcon width={18} />,
+  '스터디 그룹': <UserGroupIcon width={18} />,
+  '구인 공고': <MegaphoneIcon width={18} />,
+  마이페이지: <UserIcon width={18} />,
+};
 
 export default function SideBarNav() {
   const pathname = usePathname();
@@ -32,7 +33,7 @@ export default function SideBarNav() {
                   pathname.startsWith(navItem.path) && 'text-primary-600 bg-primary-50 font-medium',
                 )}
               >
-                {NAV_ICONS.find((icon) => navItem.name === icon.name)?.icon}
+                {NAV_ICON_MAP[navItem.name]}
                 {navItem.name}
               </Button>
             </Link>

@@ -3,16 +3,14 @@
 import { Avatar, Logo, Text } from '@/components/common';
 import { Bars3Icon } from '@heroicons/react/20/solid';
 import { useState } from 'react';
+import { useUserStore } from '@/store';
 import AuthButtonGroup from '../AuthButtonGroup';
 import UserDropdown from './UserDropdown';
 import HeaderNav from './HeaderNav';
 import SideBar from '../side-bar/SideBar';
 
-interface HeaderProps {
-  isLoggedIn: boolean;
-}
-
-export default function Header({ isLoggedIn }: HeaderProps) {
+export default function Header() {
+  const { isLoggedIn } = useUserStore();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
@@ -43,9 +41,7 @@ export default function Header({ isLoggedIn }: HeaderProps) {
         </div>
       </div>
 
-      {isMenuOpen && (
-        <SideBar isLoggedIn={isLoggedIn} isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
-      )}
+      {isMenuOpen && <SideBar isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />}
     </header>
   );
 }

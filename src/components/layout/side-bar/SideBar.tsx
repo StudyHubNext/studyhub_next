@@ -1,13 +1,15 @@
 import { cn } from '@/utils';
+import { useUserStore } from '@/store/userStore';
 import { SideBarFooter, SideBarHeader, SideBarNav } from '.';
 
 interface HeaderSideMenuProps {
-  isLoggedIn: boolean;
   isOpen: boolean;
   onClose: () => void;
 }
 
-export default function SideMenu({ isLoggedIn, isOpen, onClose }: HeaderSideMenuProps) {
+export default function SideMenu({ isOpen, onClose }: HeaderSideMenuProps) {
+  const { isLoggedIn } = useUserStore();
+
   return (
     <div className='fixed inset-0 z-50'>
       <div

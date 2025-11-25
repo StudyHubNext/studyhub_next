@@ -14,7 +14,7 @@ export const usePageNav = () => {
   const navigateToHome = () => router.push(PATHS.HOME);
   const navigateToLogin = () => router.push(PATHS.LOGIN);
   const navigateToSignup = () => router.push(PATHS.SIGNUP);
-  const navigateToMyPage = () => router.push(PATHS.MYPAGE);
+  const navigateToMyPage = () => router.push(PATHS.MYPAGE.PROFILE);
   const navigateToLecture = () => router.push(PATHS.LECTURES);
 
   const navigateToGroupList = () => router.push(PATHS.GROUPS.LIST);

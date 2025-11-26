@@ -7,8 +7,10 @@ import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 import { Button } from '@/components/common';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 import { usePageNav } from '@/hooks';
+import { useUserStore } from '@/store';
 
 export default function UserDropdown() {
+  const { logout } = useUserStore();
   const { navigateToMyPage } = usePageNav();
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -37,7 +39,7 @@ export default function UserDropdown() {
             <hr className='border-gray-100' />
           </div>
           <div className='px-2'>
-            <Button variant='ghost' className='text-danger-600 w-full gap-3 p-2'>
+            <Button variant='ghost' className='text-danger-600 w-full gap-3 p-2' onClick={logout}>
               <ArrowLeftOnRectangleIcon width={14} className='text-danger-600' />
               로그아웃
             </Button>

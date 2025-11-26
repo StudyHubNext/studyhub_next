@@ -28,14 +28,10 @@ export default function Header() {
           <div className='flex items-center gap-8'>
             <HeaderNav />
 
-            {isLoggedIn ? (
+            {isLoggedIn && user ? (
               <div className='flex items-center gap-2'>
-                <Avatar
-                  profileImage={user?.profileImageUrl}
-                  name={user?.nickname ?? ''}
-                  size='sm'
-                />
-                <Text className='text-primary-600'>{user?.nickname ?? ''}</Text>
+                <Avatar profileImage={user.profileImageUrl} name={user.nickname} size='sm' />
+                <Text className='text-primary-600'>{user.nickname}</Text>
                 <UserDropdown />
               </div>
             ) : (

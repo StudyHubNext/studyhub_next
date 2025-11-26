@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { MOCK_USER } from '@/mocks';
 import { User } from '@/types';
+import { persist } from 'zustand/middleware';
 
 interface UserState {
   isLoggedIn: boolean;
@@ -9,9 +10,16 @@ interface UserState {
   logout: () => void;
 }
 
-export const useUserStore = create<UserState>((set) => ({
-  isLoggedIn: false,
-  user: null,
-  login: () => set({ isLoggedIn: true, user: MOCK_USER }),
-  logout: () => set({ isLoggedIn: false, user: null }),
-}));
+export const useUserStore = create(
+  persist<UserState>(
+    (set) => ({
+      isLoggedIn: false,
+      user: null,
+      login: () => set({ isLoggedIn: true, user: MOCK_USER }),
+      logout: () => set({ isLoggedIn: false, user: null }),
+    }),
+    {
+      name: 'user-storage',
+    },
+  ),
+);

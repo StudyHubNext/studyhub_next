@@ -34,8 +34,20 @@ export default function LoginPage() {
         </div>
 
         <form className='flex flex-col gap-3'>
-          <Input type='email' placeholder='아이디 (example@gmail.com)' className='h-13' />
+          <label htmlFor='email' className='sr-only'>
+            아이디 (이메일)
+          </label>
           <Input
+            id='email'
+            type='email'
+            placeholder='아이디 (example@gmail.com)'
+            className='h-13'
+          />
+          <label htmlFor='password' className='sr-only'>
+            비밀번호
+          </label>
+          <Input
+            id='password'
             type='password'
             placeholder='비밀번호 (8-15자의 영문 대소문자, 숫자, 특수문자 포함)'
             className='h-13'

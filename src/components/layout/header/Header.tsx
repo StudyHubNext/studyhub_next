@@ -3,16 +3,14 @@
 import { Avatar, Logo, Text } from '@/components/common';
 import { Bars3Icon } from '@heroicons/react/20/solid';
 import { useState } from 'react';
+import { useUserStore } from '@/store';
 import AuthButtonGroup from '../AuthButtonGroup';
 import UserDropdown from './UserDropdown';
 import HeaderNav from './HeaderNav';
 import SideBar from '../side-bar/SideBar';
 
-interface HeaderProps {
-  isLoggedIn: boolean;
-}
-
-export default function Header({ isLoggedIn }: HeaderProps) {
+export default function Header() {
+  const { user, isLoggedIn } = useUserStore();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
@@ -30,10 +28,10 @@ export default function Header({ isLoggedIn }: HeaderProps) {
           <div className='flex items-center gap-8'>
             <HeaderNav />
 
-            {isLoggedIn ? (
+            {isLoggedIn && user ? (
               <div className='flex items-center gap-2'>
-                <Avatar profileImage='/profile-test.webp' name={'김개발'} size='sm' />
-                <Text className='text-primary-600'>{'김개발'}</Text>
+                <Avatar profileImage={user.profileImageUrl} name={user.nickname} size='sm' />
+                <Text className='text-primary-600'>{user.nickname}</Text>
                 <UserDropdown />
               </div>
             ) : (
@@ -43,9 +41,7 @@ export default function Header({ isLoggedIn }: HeaderProps) {
         </div>
       </div>
 
-      {isMenuOpen && (
-        <SideBar isLoggedIn={isLoggedIn} isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
-      )}
+      {isMenuOpen && <SideBar isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />}
     </header>
   );
 }

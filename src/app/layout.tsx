@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '@/app/globals.css';
-import { Footer, Header } from '@/components';
+import { Header } from '@/components';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -25,7 +25,6 @@ export default function RootLayout({
       <body>
         <Header isLoggedIn={false} />
         <main className='pt-[var(--header-height)]'>{children}</main>
-        <Footer />
       </body>
     </html>
   );

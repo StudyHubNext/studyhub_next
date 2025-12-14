@@ -10,7 +10,7 @@ export default function PhoneVerification() {
           인증코드전송
         </Button>
       </FormField>
-      <FormField id='phone' placeholder={FORM_PLACEHOLDERS.PHONE_CODE}>
+      <FormField id='phone-code' placeholder={FORM_PLACEHOLDERS.PHONE_CODE}>
         <Button variant='secondary' className='text-nowrap'>
           인증번호확인
         </Button>

@@ -15,7 +15,7 @@ export default function EmailVerification() {
           인증코드전송
         </Button>
       </FormField>
-      <FormField id='email' placeholder={FORM_PLACEHOLDERS.EMAIL_CODE}>
+      <FormField id='email-code' placeholder={FORM_PLACEHOLDERS.EMAIL_CODE}>
         <Button variant='secondary' className='text-nowrap'>
           인증번호확인
         </Button>

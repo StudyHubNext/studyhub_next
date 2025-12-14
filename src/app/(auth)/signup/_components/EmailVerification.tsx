@@ -1,6 +1,6 @@
-import FormField from '@/app/(auth)/signup/_components/FormField';
 import { Button } from '@/components';
 import { FORM_LABELS, FORM_PLACEHOLDERS, HELPER_TEXTS } from '@/constants/signup';
+import FormField from './FormField';
 
 export default function EmailVerification() {
   return (

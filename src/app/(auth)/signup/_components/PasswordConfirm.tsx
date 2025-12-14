@@ -1,5 +1,5 @@
 import { FORM_LABELS, FORM_PLACEHOLDERS, HELPER_TEXTS } from '@/constants/signup';
-import FormField from '@/app/(auth)/signup/_components/FormField';
+import FormField from './FormField';
 
 export default function PasswordConfirm() {
   return (

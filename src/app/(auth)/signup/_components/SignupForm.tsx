@@ -1,8 +1,8 @@
 import { FORM_LABELS, FORM_PLACEHOLDERS } from '@/constants/signup';
-import FormField from '@/app/(auth)/signup/_components//FormField';
+import FormField from '@/app/(auth)/signup/_components/FormField';
 import EmailVerification from '@/app/(auth)/signup/_components/EmailVerification';
-import PhoneVerification from '@/app/(auth)/signup/_components//PhoneVerification';
-import PasswordConfirm from '@/app/(auth)/signup/_components//PasswordConfirm';
+import PhoneVerification from '@/app/(auth)/signup/_components/PhoneVerification';
+import PasswordConfirm from '@/app/(auth)/signup/_components/PasswordConfirm';
 import { Button } from '@/components';
 
 export default function SignupForm() {

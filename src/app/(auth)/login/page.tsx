@@ -1,7 +1,6 @@
 import { Button, H, Input, Text } from '@/components';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 
 export default function LoginPage() {
   return (

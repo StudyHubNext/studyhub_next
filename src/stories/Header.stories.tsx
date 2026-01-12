@@ -6,19 +6,11 @@ const meta: Meta<typeof HeaderComponent> = {
   parameters: {
     layout: 'fullscreen',
   },
-  argTypes: {
-    isLoggedIn: {
-      control: 'boolean',
-    },
-  },
 };
 
 export default meta;
 type Story = StoryObj<typeof HeaderComponent>;
 
 export const Header: Story = {
-  args: {
-    isLoggedIn: true,
-  },
-  render: (args) => <HeaderComponent {...args} />,
+  render: () => <HeaderComponent />,
 };

@@ -7,3 +7,4 @@ export * from '@/components/common/input';
 export * from '@/components/common/logo';
 export * from '@/components/common/markdown-editor';
 export * from '@/components/common/text';
+export * from '@/components/common/toast';
